@@ -1,0 +1,14 @@
+.button__reset {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 40px;
+    border-radius: 5px;
+    &:hover {
+        background-color: rgb(176, 175, 175);
+        transition: .3s;
+    }
+}

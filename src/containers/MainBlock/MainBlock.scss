@@ -1,0 +1,47 @@
+$main-color: rgba(255,255,255,.3);
+
+.main-block {
+  width: 75%;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
+  &::-webkit-scrollbar {
+    background-color: #3e392f;
+    @media screen and (max-width: 1023px) {
+        display: none;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #2e2a23;
+    @media screen and (max-width: 1023px) {
+      display: none;
+  }
+}
+
+}
+.task-text {
+  color: $main-color;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+  padding: 30px 30px;
+  width: 80%;
+}
+
+.win-modal {
+  width: 70%;
+  padding: 10px 10px;
+  background-color: $main-color;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  min-height: 250px;
+  margin: 40px auto;
+  padding-top: 30px;
+  border-radius: 10px;
+}

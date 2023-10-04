@@ -1,1 +1,1 @@
-# rss-css-selectors
+# news-JS

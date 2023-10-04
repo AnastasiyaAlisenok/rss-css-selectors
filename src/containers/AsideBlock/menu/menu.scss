@@ -1,0 +1,53 @@
+$color-font: rgba(255,255,255,.5);
+$hover: rgba(255,255,255,.2);
+.helper {
+  &__menu {
+    position: relative;
+    width: 95%;
+    margin-top: -20px;
+    z-index: 10;
+    transition: .5s ease;
+    margin-bottom: 20px;
+    &-title {
+      color: $color-font;
+      padding: 20px 20px;
+    }
+    .menu__level {
+      cursor: pointer;
+      color: $color-font;
+      font-size: 20px;
+      text-align: center;
+      width: 95%;
+      margin: 0 auto;
+      padding: 5px 20px;
+      &.green {
+        color: green;
+        .complited {
+          color: green;
+        }
+      }
+      .complited {
+        margin-right: 8px;
+        color: $color-font;
+          &::after {
+            content: '\2713';
+            font-size: 24px;
+          }
+      }
+      &:hover {
+        background-color: $hover;
+        transition: .3s;
+      }
+      &.selected {
+        background-color: $hover;
+        transition: .3s;
+      }
+      .level {
+        display: inline-block;
+        padding: 5px;
+        width: 50%;
+      }
+    }
+  }
+}
+

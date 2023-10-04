@@ -1,0 +1,25 @@
+.aside-block {
+  background-color: black;
+  overflow: hidden;
+  width: 25%;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  height: 100vh;
+  @media screen and (max-width: 1023px) and (min-width: 750px) {
+      position: fixed;
+      right: -25%;
+      &.open {
+        right: 0;
+        width: 50%;
+      }
+  }
+  @media screen and (max-width: 750px) {
+    position: fixed;
+    right: -25%;
+    &.open {
+      right: 0;
+      width: 75%;
+    }
+}
+}

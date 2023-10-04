@@ -1,0 +1,80 @@
+const levels = [
+    {
+        table: ['raspberry', 'raspberry'],
+        animation: ['true', 'true'],
+        title: 'Select the raspberries',
+        width: '275px',
+        answer: ['raspberry', '.table raspberry', '*'],
+    },
+    {
+        table: ['tomato', 'raspberry', 'tomato'],
+        animation: ['true', 'false', 'true'],
+        title: 'Select tomatos',
+        width: '350px',
+        answer: ['tomato', '.table tomato'],
+    },
+    {
+        table: ['plate-lemon', ['lemon']],
+        animation: ['true', ['false']],
+        title: 'Select the plate',
+        width: '275px',
+        answer: ['plate', '.table:first-child', '.table plate'],
+    },
+    {
+        table: ['plate', ['tomato'], 'tomato'],
+        animation: ['false', ['true'], 'false'],
+        title: 'Select the tomato on the plate',
+        width: '400px',
+        answer: ['plate tomato', 'plate *', 'plate*'],
+    },
+    {
+        table: ['lemon-small', 'plate-lemon', ['lemon'], 'lemon-small'],
+        animation: ['true', 'false', ['false'], 'true'],
+        title: 'Select the small lemons',
+        width: '400px',
+        answer: ['lemon.small', '.small'],
+    },
+    {
+        table: ['plate', ['tomato'], 'plate-attr'],
+        animation: ['false', ['false'], 'true'],
+        title: 'Select the plate with value "blue"',
+        width: '480px',
+        answer: [
+            'plate[value="blue"]',
+            '[value = "blue"]',
+            '[value = "blue"]',
+            'plate[value = "blue"]',
+            'plate:nth-child(2)',
+        ],
+    },
+    {
+        table: ['plate', ['raspberry'], 'plate', 'plate-lemon', ['lemon']],
+        animation: ['false', ['false'], 'true', 'false', ['false']],
+        title: 'Select the empty elements',
+        width: '600px',
+        answer: ['plate:empty', 'plate:nth-child(2)'],
+    },
+    {
+        table: ['plate', ['raspberry'], 'watermelon', 'plate', ['watermelon'], 'watermelon'],
+        animation: ['false', 'false', 'true', 'false', ['false'], 'true'],
+        title: "Select every watermelon that's next to a plate",
+        width: '700px',
+        answer: ['plate + watermelon', 'plate+watermelon'],
+    },
+    {
+        table: ['raspberry', 'tomato', 'watermelon', 'tomato', 'watermelon', 'plate', ['watermelon']],
+        animation: ['false', 'true', 'false', 'false', 'false', 'false', 'false'],
+        title: 'Select first tomato',
+        width: '730px',
+        answer: ['tomato:first-of-type'],
+    },
+    {
+        table: ['lemon-small', 'lemon', 'lemon-small', 'lemon', 'lemon-small', 'plate', ['watermelon']],
+        animation: ['true', 'false', 'true', 'false', 'true', 'false', 'false'],
+        title: 'Select all odd lemons',
+        width: '730px',
+        answer: ['lemon:nth-of-type(odd)', 'lemon.small', '.small'],
+    },
+];
+
+export default levels;

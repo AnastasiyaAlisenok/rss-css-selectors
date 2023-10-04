@@ -1,0 +1,39 @@
+.footer {
+  margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #666;
+    margin-bottom: 20px;
+    .git {
+      &__img {
+        background-image: url('../../../assets/img/git.png');
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        z-index: 20;
+        &:hover {
+          transform: scale(1.1);
+          transition: .3s;
+        }
+      }
+    }
+    .year {
+      font-weight: 700;
+    }
+    .rss {
+      &__img {
+        background-image: url('../../../assets/img/rsschool.png');
+        background-size: cover;
+        width: 70px;
+        height: 30px;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 20;
+        &:hover {
+          transform: scale(1.1);
+          transition: .3s;
+        }
+      }
+    }
+}
